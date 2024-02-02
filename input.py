@@ -1,20 +1,12 @@
-
-name = input('What is your name? ')
-age = input("How old are you? ")
 try:
-    age = int(age)
-    birth_year = 2023 - age
-    print( name, " , you were born in ", birth_year,".", sep = "")
-    number = input("give me a number to divide the age")
-    number = int(number)
-    print(age/number)
+    name= input( "What is your name?")
+    age= input("How old are you")
+    age= int(age)
 except ValueError :
-    print("invalid age. please enter a number")
-except ZeroDivisionError:
-    print("You cannot divide by zero")
+    print("Invalid age. Please enter a number.")
 else:
-    print("No exceptions were raised")
-finally:
-    print("Thank you for playing")
-
-
+    if age < 18 :
+        print("You are a minor. You can not play the awesome drinking game.")
+    elif country == "USA" and age < 21:
+        print("You are an adult. You can play the awesome driking game.")
+        print("Have some", random.choice(drinks), "and enjoy the game.")

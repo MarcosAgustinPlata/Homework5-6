@@ -1,9 +1,18 @@
+name = "Marcos"
+age = 19
 
-name = input("What is your name? ")
-age = input("How old are you? ")
-age = int(age)
-current_year = datetime.now().year
-birth_year = current_year - age
-print(f"{name}, you were born in {birth_year}.")
-
-
+try:
+    birth_year = 2023 - age
+    print(name, ", you were born in", birth_year, ".")
+    number = input("Give me a number to divide your age: ")
+    number = int(number)
+    result = age / number
+    print("Result of age divided by", number, "is:", result)
+except ValueError:
+    print("Invalid age. Please enter a number.")
+except ZeroDivisionError:
+    print("You cannot divide by zero.")
+else:
+    print("No exceptions were raised.")
+finally:
+    print("Thank you for playing.")
